@@ -17,7 +17,7 @@ let currentScore;
 let activePlayer;
 let playing;
 
-const unit = function () {
+const init = function () {
   scores = [0, 0];
   currentScore = 0;
   activePlayer = 0;
@@ -33,7 +33,7 @@ const unit = function () {
   player0El.classList.remove('player--winner');
   player1El.classList.remove('player--winner');
 };
-unit();
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -82,4 +82,4 @@ btnHold.addEventListener('click', function () {
   }
 });
 
-btnNew.addEventListener('click', unit);
+btnNew.addEventListener('click', init);
